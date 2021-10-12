@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Homework2-3</title>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/IsNumber.js"></script>
+    
+</head>
+<body>
+    <div class="card mx-auto mt-5 border border-3 shadow p-3 mb-5 bg-white rounded" style="width: 21rem;">
+        <img src="./assets/img/pileofcreditcards.jpg" class="card-img-top" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title">Credit cards validator</h5>
+          <input class="form-control" id="inputCode" placeholder="Enter card number">
+          <div class="container mt-3 text-center">
+            <div class="alert alert-primary mx-auto" role="alert" id="outCorr">Is correct?</div>
+            <div class="alert alert-primary mx-auto" role="alert" id="outType" style="display: none;">Card type</div>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="isCardValid(); isNumber()">Check</button>
+        </div>
+      </div>
+</body>
+</html>
+
