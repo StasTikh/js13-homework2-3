@@ -3,16 +3,18 @@ function isCardValid() {
  
     let cardNumber = inputCode.value.replace(/\s+/g, '');
     let numberCheck = 0;
-    
-
+    let isOdd = true;
+     
     for (i=cardNumber.length-1; i>=0; i--) {
         let checkNumber = +cardNumber[i];
-        if (i % 2 == 0) {
+        if (!isOdd) {
             if ((checkNumber = checkNumber * 2) > 9){
                 checkNumber = checkNumber - 9;    
-            } 
+            }
         }
         numberCheck = numberCheck + checkNumber;
+        isOdd = !isOdd;
+        console.log(numberCheck, checkNumber, isOdd)
     }
 
     if ((numberCheck % 10) == 0) {
